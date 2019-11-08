@@ -82,4 +82,9 @@ def search(grid, dictionary):
 
 
 
-def get_dictionary()
+def get_dictionary(dictionary_file):
+    """
+    load dictionary file
+    """
+    with open(dictionary_file) as f:
+        return [w.strip().upper() for w in f]
